@@ -1,5 +1,5 @@
 {% set name = "django-bootstrap5" %}
-{% set version = "21.2" %}
+{% set version = "21.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a354789370593dbf3f7cb74c442f2bab231c2327bdf4349475eecebd79bc1025
+  sha256: 35086341881780a44b2e27255894f6029fc5ef75e5a0ec8ebd82f47a5184fa73
 
 build:
   noarch: python
