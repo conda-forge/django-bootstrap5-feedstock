@@ -18,11 +18,11 @@ requirements:
   host:
     - python >=3.7
     - pip
+    - hatchling
   run:
     - python >=3.7
     - django >=3.2
     - beautifulsoup4 >=4.12.2
-    - hatchling
     - pillow >=9.5.0
 
 test:
