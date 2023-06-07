@@ -1,13 +1,13 @@
 {% set name = "django-bootstrap5" %}
-{% set version = "23.1" %}
+{% set version = "23.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3a3748b1ce1a2a73c2eca851c2926e7b6e5a317815e4da7ced6b1807c4792b1a
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 21e1956a8a819370decc5d365ce4f4207761cb065afec5a7df8c4c8c49507f2e
 
 build:
   noarch: python
@@ -16,13 +16,14 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
+    - hatchling
   run:
-    - python >=3.6
-    - django >=2.2
-    - beautifulsoup4 >=4.8.0
-    - importlib-metadata <3
+    - python >=3.7
+    - django >=3.2
+    - beautifulsoup4 >=4.12.2
+    - pillow >=9.5.0
 
 test:
   imports:
