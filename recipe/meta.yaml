@@ -11,8 +11,8 @@ source:
 
 build:
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
@@ -22,16 +22,14 @@ requirements:
   run:
     - python >=3.7
     - django >=3.2
-    - beautifulsoup4 >=4.12.2
-    - pillow >=9.5.0
 
 test:
   imports:
     - django_bootstrap5
-  requires:
-    - pip
   commands:
     - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/zostera/django-bootstrap5
@@ -44,4 +42,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - rxm7706
     - swainn
