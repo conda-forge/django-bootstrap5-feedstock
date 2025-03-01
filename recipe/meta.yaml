@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django_bootstrap5-{{ version }}.tar.gz  
   sha256: e81c77eb710356f94e426a51f4f469890d5720f5e7e53d650f4405d4cc94da04
 
 build:
@@ -17,8 +17,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools >=64
-    - setuptools-scm >=8
+    - hatchling
     - pip
   run:
     - python >={{ python_min }}
